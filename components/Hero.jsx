@@ -74,7 +74,7 @@ const Hero = () => {
                 whileInView = {{ y:0, opacity:1,bounce:0.3 }}
                 transition = {{delay: 0.2}}
                 viewport = {{ once: true}}
-            >I'm a Front End Developer based in New Jersey.</motion.h1>
+            >I&apos;m a Front End Developer based in New Jersey.</motion.h1>
         </TextWrapper>
         <TextWrapper size = "40%" marginT = '2rem'>
             <motion.h3 className = "about-me small-text"

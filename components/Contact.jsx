@@ -17,7 +17,7 @@ const Contact = () => {
     >
         <TextWrapper width  = "100%">
             <p className = "preheading">Contact</p>
-            <h1 className = "heading">Interested? I'm one email away.</h1>
+            <h1 className = "heading">Interested? I&apos;m one email away.</h1>
         </TextWrapper>
         <TextWrapper>
             <p className = "memo">Actively looking for job positions at the moment!</p>

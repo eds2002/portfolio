@@ -17,8 +17,8 @@ const Projects = () => {
             <h1 className = "heading">Check out some of my recent projects</h1>
         </TextWrapper>
         <ProductWrapper displayMore = {showMore} >
-            {projects.map((product)=>(
-                <ProjBox name = {product.name} about = {product.about} tools = {product.tools} extra = {product.extra} gitLink = {product.resposLink} url = {product.webLink}/>
+            {projects.map((product, i)=>(
+                <ProjBox key = {i} name = {product.name} about = {product.about} tools = {product.tools} extra = {product.extra} gitLink = {product.resposLink} url = {product.webLink}/>
             ))}
             <p className = "show-more" onClick = {()=>setShowMore(!showMore)}>{showMore ? "Close" : "Show more"}</p>
         </ProductWrapper>

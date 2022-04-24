@@ -18,12 +18,12 @@ const About = () => {
                 Hi! My name is Eduardo Sanchez and I love creating things on the web.
                 My first experience with web development was back in 2020, when I would
                 create my own e-commerce pages with a Shopify plugin called Pagefly. Granted,
-                they were the ugliest pieces of work I've ever made, but this experience sparked my interest into web dev.
+                they were the ugliest pieces of work I&apos;ve ever made, but this experience sparked my interest into web dev.
             </p>
             <p className = "about">
                 In September 2021, I took a web development class at my community college and decided to pursue 
                 Front End Development around October of that year. I decided my best course of action was to self teach myself the fundamentals
-                of web dev. Fast forward now, I'm ready to be part of the tech industry.
+                of web dev. Fast forward now, I&apos;m ready to be part of the tech industry.
             </p>
             <div className = "about">
                 <p>Some of my skills:</p>

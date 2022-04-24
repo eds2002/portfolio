@@ -32,8 +32,8 @@ const ProjBox = ({name, about, tools, extra, gitLink, url}) => {
             <h1 onClick = {()=> setMoreDetails(!moreDetails)} >{about}</h1>
         </Top>
         <Bottom>
-            {tools.map((tool)=>(
-                <li>{tool}</li>
+            {tools.map((tool, i)=>(
+                <li key = {i}>{tool}</li>
             ))}
         </Bottom>
         <DetailBox show = {moreDetails}>
