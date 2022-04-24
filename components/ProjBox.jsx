@@ -11,7 +11,19 @@ const ProjBox = ({name, about, tools, extra, gitLink, url}) => {
   return (
     <Project>
         <Top>
-            <h4>{name}</h4>
+            <div>
+                <h4>{name}</h4>
+                <Link href = {gitLink}>
+                    <a target = "_blank">
+                        <GitHubIcon className = "git" sx={{ fontSize: 20 }}/>
+                    </a>
+                </Link>
+                <Link href = {url}>
+                    <a target = "_blank">
+                        <ShortcutIcon className = "external" sx={{ fontSize: 20 }}/>
+                    </a>
+                </Link>
+            </div>
             <h1 onClick = {()=> setMoreDetails(!moreDetails)} >{about}</h1>
         </Top>
         <Bottom>
@@ -20,7 +32,7 @@ const ProjBox = ({name, about, tools, extra, gitLink, url}) => {
             ))}
         </Bottom>
         <DetailBox show = {moreDetails}>
-                <CloseIcon className = "close" onClick = {()=>setMoreDetails(!moreDetailsw)}/>
+                <CloseIcon className = "close" onClick = {()=>setMoreDetails(!moreDetails)}/>
             <div className="top">
                 <h3>-A little more about <span className = "highlight">{name}</span></h3>
                 <h2>{extra}</h2>
@@ -72,6 +84,20 @@ h1{
 h4{
     color:hsla(212, 13%, 60%,1);
 }
+
+div{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    .git,.external{
+        color:hsla(360,0%,50%,1);
+        &:hover{
+            color:hsla(360,0%,70%,1);
+        }
+    }
+}
+
+
 `
 const Bottom = styled.div`
 display:flex;

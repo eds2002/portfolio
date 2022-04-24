@@ -84,7 +84,7 @@ li{
 `
 
 const Btn = styled(Button)`
-border-radius:500px;
+border-radius:10px;
 text-transform:none;
 font-size:14px;
 font-weight:400;

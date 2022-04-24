@@ -25,7 +25,7 @@ const Container = styled.section`
     font-weight:600;
     line-height:1.105;
     @media (max-width: 768px) {
-        font-size:24px;
+        font-size:32px;
     }
 }
 
@@ -36,9 +36,9 @@ const TextWrapper = styled.div`
     color:hsla(205, 84%, 22%,1);
     margin-top:${({marginT})=> marginT};
     .about-me{
-        font-weight:500;
+        font-weight:600;
         line-height:1.6;
-        font-size:20px;
+        font-size:24px;
     }
     *{
         margin:6px 0px;
@@ -61,8 +61,8 @@ const Hero = () => {
         </TextWrapper>
         <TextWrapper size = "40%" marginT = '2rem'>
             <h3 className = "about-me small-text">
-                Interested in creating beautiful user experiences <span className = "text--gray">through the web. I </span>love to learn
-                <span className = "text--non-prominent"> and</span> love to push myself <span className = "text--gray">to eventually become the</span> best in my field.
+                Interested in creating beautiful user experiences <span className = "text--non-prominent">through the web. </span>I love to learn
+                <span className = "text--non-prominent"> and</span> love to push myself <span className = "text--non-prominent">to eventually become the</span> best in my field.
             </h3>
         </TextWrapper>
     </Container>

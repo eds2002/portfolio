@@ -1,7 +1,7 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
-import { Hero, Navbar, Projects } from '../components'
+import { About, Contact, Footer, Hero, Navbar, Projects } from '../components'
 import styled from 'styled-components'
 
 const Container = styled.section`
@@ -21,7 +21,10 @@ export default function Home() {
       <Layout>
         <Navbar/>
         <Hero/>
+        <About/>
         <Projects/>
+        <Contact/>
+        <Footer/>
       </Layout>
     </Container>
   )
