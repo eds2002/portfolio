@@ -4,17 +4,19 @@ import {useState} from 'react'
 import { projects } from '../constants/constant'
 import ProjBox from './ProjBox'
 
+import {useInView} from 'react-intersection-observer'
+import {useEffect} from 'react'
+
 const Projects = () => {
 
     const [showMore, setShowMore] = useState(false);
-
   return (
-    <Container>
+    <Container id = "projects">
         <TextWrapper width = "100%" size = "large">
             <p className = "preheading">Projects</p>
             <h1 className = "heading">Check out some of my recent projects</h1>
         </TextWrapper>
-        <ProductWrapper displayMore = {showMore}>
+        <ProductWrapper displayMore = {showMore} >
             {projects.map((product)=>(
                 <ProjBox name = {product.name} about = {product.about} tools = {product.tools} extra = {product.extra} gitLink = {product.resposLink} url = {product.webLink}/>
             ))}

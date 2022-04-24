@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import Button from '@mui/material/Button';
+import { motion } from 'framer-motion';
 
 
 const Contact = () => {
@@ -9,10 +10,14 @@ const Contact = () => {
   }  
 
   return (
-    <Container>
+    <Container id = "contact"
+        initial = {{y:100, opacity:0}}
+        whileInView = {{ y:0, opacity:1 }}
+        viewport = {{ once: true}}
+    >
         <TextWrapper width  = "100%">
             <p className = "preheading">Contact</p>
-            <h1 className = "heading">Intersted? I'm one email away.</h1>
+            <h1 className = "heading">Interested? I'm one email away.</h1>
         </TextWrapper>
         <TextWrapper>
             <p className = "memo">Actively looking for job positions at the moment!</p>
@@ -23,7 +28,7 @@ const Contact = () => {
 }
 
 
-const Container = styled.section`
+const Container = styled(motion.section)`
     width:100%;
     height:90vh;
     display:flex;

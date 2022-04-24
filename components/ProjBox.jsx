@@ -4,12 +4,17 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import ShortcutIcon from '@mui/icons-material/Shortcut';
 import CloseIcon from '@mui/icons-material/Close';
 import Link from 'next/link'
+import { motion } from 'framer-motion';
 
 
 const ProjBox = ({name, about, tools, extra, gitLink, url}) => {
   const [moreDetails, setMoreDetails] = useState(false);
   return (
-    <Project>
+    <Project
+        initial = {{y:100, opacity:0}}
+        whileInView = {{ y:0, opacity:1 }}
+        viewport = {{ once: true}}
+    >
         <Top>
             <div>
                 <h4>{name}</h4>
@@ -53,7 +58,7 @@ const ProjBox = ({name, about, tools, extra, gitLink, url}) => {
     </Project>
   )
 }
-const Project = styled.div`
+const Project = styled(motion.div)`
 position:relative;
 display:flex;
 flex-direction:column;

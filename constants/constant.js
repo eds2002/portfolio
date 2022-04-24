@@ -2,18 +2,18 @@ export const projects = [
     {
         name: "Thousand Prompts",
         about: "A Journal Pwa, Thousand Prompts combines C.B.T therapy and journaling.",
-        tools: ["HTML", "Css", "Scss", "Javscript", "Firebase", "Netlify", "PWA"],
+        tools: ["HTML", "Css", "Scss", "Javscript", "Firebase", "Firebase Hosting", "PWA"],
         extra: "Thousand Prompts was a project I was inspired to make. C.B.T and journaling were things that helped me in my roughest times. So I thought, why not try and fit both of them together?",
-        resposLink: "",
-        webLink: "",
+        resposLink: "https://github.com/eds2002/thousand-prompts",
+        webLink: "https://www.thousandprompts.com",
     },
     {
         name: "Ticket Sensei",
         about: "Uses the Ticket Master API to locate popular attractions.",
         tools: ["Next JS","Ticket Master Api", "Styled Components"],
         extra: "In my Front End Developer journey, I really wanted to expand my knowledge and understand SSR, SSG, and CSR. Building this project helped me somewhat understand the pros & cons of each!",
-        resposLink: "",
-        webLink: "",
+        resposLink: "https://github.com/eds2002/ticketsensei",
+        webLink: "https://ticketsense.vercel.app/",
     },
     {
         name: "Fake Ecom",

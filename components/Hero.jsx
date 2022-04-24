@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import * as React from 'react';
 import Link from 'next/link'
+import { motion } from 'framer-motion';
 
 
 const Container = styled.section`
@@ -38,7 +39,7 @@ const TextWrapper = styled.div`
     .about-me{
         font-weight:600;
         line-height:1.6;
-        font-size:24px;
+        font-size:22px;
     }
     *{
         margin:6px 0px;
@@ -55,15 +56,36 @@ const Hero = () => {
   return (
     <Container>
         <TextWrapper size = "100%">
-            <h4 className = 'small-text text--non-prominent'>👋 Hello!</h4>
-            <h1 className = "big-text text--non-prominent">My name is Eduardo Sanchez</h1>
-            <h1 className = "big-text ">I'm a Front End Developer based in New Jersey.</h1>
+            <motion.h4 className = 'small-text text--non-prominent'
+                initial = {{y:100, opacity:0}}
+                whileInView = {{ y:0, opacity:1 }}
+                viewport = {{ once: true}}
+            >👋 Hello!</motion.h4>
+
+            <motion.h1 className = "big-text text--non-prominent"
+                initial = {{y:100, opacity:0}}
+                whileInView = {{ y:0, opacity:1,bounce:0.3 }}
+                transition = {{delay:0.1}}
+                viewport = {{ once: true}}
+            >My name is Eduardo Sanchez</motion.h1>
+
+            <motion.h1 className = "big-text "
+                initial = {{y:100, opacity:0}}
+                whileInView = {{ y:0, opacity:1,bounce:0.3 }}
+                transition = {{delay: 0.2}}
+                viewport = {{ once: true}}
+            >I'm a Front End Developer based in New Jersey.</motion.h1>
         </TextWrapper>
         <TextWrapper size = "40%" marginT = '2rem'>
-            <h3 className = "about-me small-text">
+            <motion.h3 className = "about-me small-text"
+                initial = {{y:100, opacity:0}}
+                whileInView = {{ y:0, opacity:1,bounce:0.3 }}
+                transition = {{delay: 0.3}}
+                viewport = {{ once: true}}
+            >
                 Interested in creating beautiful user experiences <span className = "text--non-prominent">through the web. </span>I love to learn
                 <span className = "text--non-prominent"> and</span> love to push myself <span className = "text--non-prominent">to eventually become the</span> best in my field.
-            </h3>
+            </motion.h3>
         </TextWrapper>
     </Container>
   )

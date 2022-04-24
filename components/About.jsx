@@ -1,8 +1,14 @@
 import styled from 'styled-components'
+import { motion } from 'framer-motion'
 
 const About = () => {
   return (
-    <Container>
+    <Container
+        id = "about"
+        initial = {{y:100, opacity:0}}
+        whileInView = {{ y:0, opacity:1 }}
+        viewport = {{ once: true}}
+    >
         <TextWrapper width = "100%">
             <p className = "preheading">About Me</p>
             <h1 className = "heading">Introducing myself</h1>
@@ -36,7 +42,7 @@ const About = () => {
   )
 }
 
-const Container = styled.section`
+const Container = styled(motion.section)`
 width:100%;
 margin-bottom:100px;
 `
